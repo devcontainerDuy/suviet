@@ -10,14 +10,15 @@ class Images extends Model
 {
     use HasFactory;
 
-    protected $table = 'images'; // Tên bảng trong database 
+    protected $table = 'images';
 
     protected $fillable = [
         'link',
         'product_id',
+        'created_at',
+        'updated_at',
     ];
 
-    // Định nghĩa mối quan hệ với model Product (nếu có)
     public function product(): BelongsTo
     {
         return $this->belongsTo(related: Products::class);

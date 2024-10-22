@@ -12,7 +12,7 @@
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Danh sách sản phẩm</h6>
-                <a class="btn btn-success" href="{{ route('products.create') }}"><i class="fas fa-plus"></i> Thêm mới</a>
+                <a class="btn btn-success" href="/admin/san-pham/create"><i class="fas fa-plus"></i> Thêm mới</a>
             </div>
             <div class="table-responsive">
                 <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -35,19 +35,16 @@
                                 <td><input class="form-check-input" type="checkbox"></td>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $product->name }}</td>
-                                <td><img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
-                                        width="50"></td>
+                                <td><img src="{{ $product->images }}" alt="{{ $product->name }}" width="50">
+                                </td>
                                 <td>{{ $product->category->name }}</td>
                                 <td>{{ number_format($product->price, 0, ',', '.') }} vnđ</td>
                                 <td>{{ $product->quantity }}</td>
-                                <td>{{ $product->status ? 'Hiển thị' : 'Ẩn' }}</td>
+                                <td>{{ $product->is_show ? 'Hiển thị' : 'Ẩn' }}</td>
                                 <td>
-                                    <a href="{{ route('products.show', $product->id) }}"
-                                        class="btn btn-sm btn-primary">Xem</a>
-                                    <a href="{{ route('products.edit', $product->id) }}"
-                                        class="btn btn-sm btn-warning">Sửa</a>
-                                    <form action="{{ route('products.destroy', $product->id) }}" method="POST"
-                                        style="display: inline-block;">
+                                    <a href="" class="btn btn-sm btn-primary">Xem</a>
+                                    <a href="" class="btn btn-sm btn-warning">Sửa</a>
+                                    <form action="" method="POST" style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger"

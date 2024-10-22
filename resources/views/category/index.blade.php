@@ -12,7 +12,7 @@
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Danh sách phân loại sản phẩm</h6>
-                <a class="btn btn-success" href="{{ route('categories.create') }}"><i class="fas fa-plus"></i> Thêm mới</a>
+                <a class="btn btn-success" href="/admin/danh-muc/create"><i class="fas fa-plus"></i> Thêm mới</a>
             </div>
             <div class="table-responsive">
                 <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -33,11 +33,10 @@
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->status ? 'Hiển thị' : 'Ẩn' }}</td>
                                 <td>
-                                    <a href="{{ route('categories.show', $category->id) }}"
-                                        class="btn btn-sm btn-primary">Xem</a>
-                                    <a href="{{ route('categories.edit', $category->id) }}"
+                                    <a href="" class="btn btn-sm btn-primary">Xem</a>
+                                    <a href="/admin/danh-muc/{{ $category->id }}/edit "
                                         class="btn btn-sm btn-warning">Sửa</a>
-                                    <form action="{{ route('categories.destroy', $category->id) }}" method="POST"
+                                    <form action="/admin/danh-muc/{{ $category->id }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')

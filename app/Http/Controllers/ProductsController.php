@@ -2,17 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\Products;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+    protected $model;
+    protected $instance;
+    public function __construct()
+    {
+        $this->model = Products::class;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+
+        $this->instance = $this->model::with('category', 'images')->get();
+        return view('product.index', ['products' => $this->instance]);
     }
 
     /**
@@ -20,7 +29,8 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        $this->instance = Categories::all();
+        return view('product.create', ['categories' => $this->instance]);
     }
 
     /**
@@ -28,7 +38,15 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'sale' => 'required',
+            'description' => 'required',
+        ]);
+
+        $this->instance = $this->model::create($request->all());
+        return redirect('/admin/san-pham')->with('success', 'Thêm mới thành công!');
     }
 
     /**

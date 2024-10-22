@@ -33,6 +33,6 @@ class Products extends Model
 
     public function images(): HasMany
     {
-        return $this->hasMany(related: Images::class);
+        return $this->hasMany(Images::class, 'product_id', 'id');
     }
 }
