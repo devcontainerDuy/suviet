@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sứ Việt - Admin Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Logo.png" rel="icon">
+
+    <!-- Google Web Fonts Mảnope-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" /> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .nav-pills .nav-link {
+            border-radius: 0;
+            padding: 10px 20px;
+            color: #6c757d;
+            background-color: #f8f9fa;
+            border: 1px solid #e2e6ea;
+        }
+        .nav-pills .nav-link.active {
+            color: #198754;
+            background-color: #ffffff;
+            border-color: #198754;
+            font-weight: bold;
+        }
+        .nav-pills .nav-link.disabled {
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .nav-pills .nav-link i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-6 pb-3 /bg-white">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index2.html" class="navbar-brand mx-4 mb-3 d-none d-md-block">
+                    <img src="img/Logo.png" alt="" class="img-fluid d-block ml-img">
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Henry Bui</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="index2.html" class="nav-item nav-link"><i class="fa fa-list me-2"></i>Bảng điều khiển</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Tài khoản</a>
+                        <div class="dropdown-menu bg-transparent border-0 mx-4">
+                            <a href="table.html" class="dropdown-item">Danh sách tài khoản</a>
+                            <a href="table2.html" class="dropdown-item">Cập nhật tài khoản</a>
+                            <!-- <a href="element.html" class="dropdown-item">Other Elements</a> -->
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-layer-group me-2"></i>Danh mục</a>
+                        <div class="dropdown-menu bg-transparent border-0 mx-4">
+                            <a href="button.html" class="dropdown-item">Sản phẩm</a>
+                            <a href="typography.html" class="dropdown-item">Tài khoản</a>
+                            <a href="element.html" class="dropdown-item">Bài viết</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-boxes me-2"></i>Sản phẩm</a>
+                        <div class="dropdown-menu bg-transparent border-0 mx-4">
+                            <a href="button.html" class="dropdown-item">Danh sách sản phẩm</a>
+                            <a href="typography.html" class="dropdown-item">Cập nhật</a>
+                            <a href="element.html" class="dropdown-item">Mã giảm giá</a>
+                        </div>
+                    </div>
+                    <a href="oder.html" class="nav-item nav-link"><i class="fa fa-truck me-2"></i>Quản lý đơn hàng</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index2.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <!-- <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2> -->
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Tìm kiếm...">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Tin nhắn</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Henry Bui gửi một tin nhắn</h6>
+                                        <small>15 phút trước</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Henry Bui gửi một tin nhắn</h6>
+                                        <small>15 phút trước</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Henry Bui gửi một tin nhắn</h6>
+                                        <small>15 phút trước</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">Xem tất cả tin nhắn</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Thông Báo</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Cập nhật sản phẩm ID 001</h6>
+                                <small>30 phút trước</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Cập nhật sản phẩm ID 001</h6>
+                                <small>30 phút trước</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Cập nhật sản phẩm ID 001</h6>
+                                <small>30 phút trước</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">Xem tất cả thông báo</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Henry Bui</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">Tài khoản</a>
+                            <a href="#" class="dropdown-item">Cài đặt</a>
+                            <a href="#" class="dropdown-item">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+            <div class="container my-4">
+                <button class="btn btn-danger mb-3"><i class="fa fa-trash-alt"></i> Xóa tất cả</button>
+                
+                <ul class="nav nav-pills mb-3 px-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">All (3)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Just ordered (3)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Confirmed (0)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Delivering (0)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Transferring in progress (0)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Completely transferred (0)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Delivered (0)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cancelled (0)</a>
+                    </li>
+                </ul>
+            
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th><input class="form-check-input" type="checkbox"></th>
+                                <th>STT</th>
+                                <th>Name</th>
+                                <th>Order date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Setting</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>1</td>
+                                <td>
+                                    <strong>Bùi Anh Tuấn</strong><br>
+                                    <span>241008N2UDI6</span><br>
+                                    <a href="#">Website</a>
+                                </td>
+                                <td>03:10<br>08-10-2024</td>
+                                <td class="text-red">$225,00</td>
+                                <td>
+                                    <span class="status-badge just-ordered">Just ordered</span><br>
+                                    <span class="status-badge unpaid">Unpaid</span>
+                                </td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>2</td>
+                                <td>
+                                    <strong>Bùi Anh Tuấn</strong><br>
+                                    <span>240924INK9HZ</span><br>
+                                    <a href="#">Website</a>
+                                </td>
+                                <td>09:09<br>24-09-2024</td>
+                                <td class="text-red">$8.400.000,00</td>
+                                <td>
+                                    <span class="status-badge just-ordered">Just ordered</span><br>
+                                    <span class="status-badge unpaid">Unpaid</span>
+                                </td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>3</td>
+                                <td>
+                                    <strong>Bùi Anh Tuấn</strong><br>
+                                    <span>240923MEYPVR</span><br>
+                                    <a href="#">Website</a>
+                                </td>
+                                <td>02:09<br>23-09-2024</td>
+                                <td class="text-red">$44.700.000,00</td>
+                                <td>
+                                    <span class="status-badge just-ordered">Just ordered</span><br>
+                                    <span class="status-badge unpaid">Unpaid</span>
+                                </td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top pb-2  text-center">
+                    <p class="pt-4"> Sứ Việt © 2024. Thiết kế bởi Sứ Việt </p>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/chart/chart_doanhthu.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
