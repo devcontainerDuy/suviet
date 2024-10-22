@@ -43,7 +43,8 @@
                                 <td>{{ $product->is_show ? 'Hiển thị' : 'Ẩn' }}</td>
                                 <td>
                                     <a href="" class="btn btn-sm btn-primary">Xem</a>
-                                    <a href="" class="btn btn-sm btn-warning">Sửa</a>
+                                    <a href="/admin/san-pham/{{ $product->id }}/edit"
+                                        class="btn btn-sm btn-warning">Sửa</a>
                                     <form action="" method="POST" style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')

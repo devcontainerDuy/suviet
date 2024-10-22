@@ -60,24 +60,30 @@ class ProductsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Products $products)
+    public function edit($id)
     {
-        //
+        $this->instance = $this->model::findOrFail($id);
+        $cate = Categories::all();
+        return view('product.edit', ['products' => $this->instance, 'categories' => $cate]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Products $products)
+    public function update(Request $request,  $id)
     {
-        //
+        $this->instance = $this->model::findOrFail($id);
+        $this->instance->update($request->all());
+        return back()->with('success', 'Cập nhật thành công!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Products $products)
+    public function destroy($id)
     {
-        //
+        $this->instance = $this->model::findOrFail($id);
+        $this->instance->delete();
+        return back()->with('success', 'Xóa thành công!');
     }
 }
